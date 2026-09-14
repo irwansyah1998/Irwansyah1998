@@ -18,6 +18,81 @@
     <style>
       .luxury { font-family: "Segoe UI", Arial, sans-serif; }
       .mini { letter-spacing: 0.22em; text-transform: uppercase; }
+      .social-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        padding: 8px 12px 8px 10px;
+        border-radius: 14px;
+        border: 1px solid rgba(214,173,92,0.26);
+        background: linear-gradient(180deg, rgba(214,173,92,0.05), rgba(214,173,92,0.02));
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.04), 0 0 0 1px rgba(214,173,92,0.04);
+        color: #f7d98f;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        white-space: nowrap;
+      }
+      .social-icon {
+        width: 20px;
+        height: 20px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 7px;
+        overflow: hidden;
+        flex-shrink: 0;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.22), 0 0 12px rgba(214,173,92,0.14);
+      }
+      .social-icon svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .instagram-icon {
+        background: linear-gradient(135deg, #feda75, #fa7e1e 25%, #d62976 55%, #4f5bd5 100%);
+      }
+      .instagram-icon svg {
+        fill: none;
+        stroke: #ffffff;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .tiktok-icon {
+        background: rgba(255,255,255,0.02);
+      }
+      .tiktok-icon img,
+      .tiktok-icon svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      .linkedin-icon {
+        background: #0a66c2;
+      }
+      .linkedin-icon svg {
+        fill: #ffffff;
+      }
+      .gmail-icon {
+        background: linear-gradient(135deg, #f5f5f5, #eaeaea);
+      }
+      .gmail-icon svg {
+        fill: none;
+        stroke: #ea4335;
+        stroke-width: 1.8;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      .status-icon,
+      .location-icon {
+        background: linear-gradient(135deg, #f7e7bb, #d5aa4b);
+      }
+      .status-icon svg,
+      .location-icon svg {
+        fill: #1b150d;
+      }
       .led {
         position: absolute;
         left: 9%;
@@ -136,7 +211,7 @@
           <div style="padding:24px 22px;border-radius:24px;border:1px solid rgba(214,173,92,0.15);background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(214,173,92,0.04));">
             <div class="luxury mini" style="font-size:10px;color:#d7b972;margin-bottom:12px;">Professional Summary</div>
             <p style="margin:0;font-family:'Segoe UI',Arial,sans-serif;font-size:15px;line-height:1.8;color:#edf1f8;">
-              I build scalable backend systems, secure APIs, and efficient digital experiences for real-world business needs. I enjoy turning complex ideas into reliable products with strong architecture, maintainable code, and a sharp user-focused mindset.
+              I build scalable backend systems, secure APIs, and digital solutions that support operational efficiency and business growth. My work is centered on creating reliable, maintainable, and user-focused platforms that translate complex needs into clear and effective applications.
             </p>
           </div>
 
@@ -157,18 +232,50 @@
           </div>
         </div>
 
+        <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:16px;padding:28px 42px 0 42px;">
+          <div style="padding:20px 22px;border-radius:18px;border:1px solid rgba(214,173,92,0.14);background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(214,173,92,0.04));">
+            <div class="luxury mini" style="font-size:9px;color:#d7b972;margin-bottom:10px;">Featured Project</div>
+            <div style="font-size:15px;font-weight:800;color:#f7f7fb;">Sistem Pengelola Data di Perusahaan Konfeksi Berbasis Web Menggunakan CodeIgniter 3</div>
+            <div style="margin-top:8px;font-size:13px;line-height:1.8;color:#dfe6f5;">
+              Built a web-based data management system for a garment company using CodeIgniter 3, with a focus on organized operational workflows, data processing efficiency, and practical business support.
+            </div>
+            <div style="margin-top:10px;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#f7d98f;">GitHub: github.com/irwansyah1998/TugasAkhir</div>
+          </div>
+
+          <div style="padding:20px 22px;border-radius:18px;border:1px solid rgba(214,173,92,0.14);background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(214,173,92,0.04));">
+            <div class="luxury mini" style="font-size:9px;color:#d7b972;margin-bottom:10px;">Featured Project</div>
+            <div style="font-size:15px;font-weight:800;color:#f7f7fb;">SiMadik - Sistem Manajemen Pendidikan</div>
+            <div style="margin-top:8px;font-size:13px;line-height:1.8;color:#dfe6f5;">
+              Developed an education management system designed to streamline school administration, academic data management, and operational processes in a structured digital environment.
+            </div>
+            <div style="margin-top:10px;font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:#f7d98f;">GitHub: github.com/irwansyah1998/SiMadik</div>
+          </div>
+        </div>
+
         <div style="position:relative;z-index:1;padding:28px 42px 42px 42px;">
           <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding:22px 0 0 0;">
             <div style="flex:1;min-width:0;">
-              <div class="luxury mini" style="font-size:9px;color:#d7b972;margin-bottom:10px;">Profile</div>
-              <div style="font-size:14px;color:#dfe6f5;line-height:1.85;max-width:560px;">
-                Calm, focused, and always growing, I combine technical discipline with a modern creative mindset to build impactful digital products and meaningful experiences.
-              </div>
             </div>
 
-            <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;">
-              <div style="padding:10px 16px;border-radius:12px;border:1px solid rgba(214,173,92,0.3);background:rgba(214,173,92,0.055);color:#f7d98f;font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;">Indonesia</div>
-              <div style="padding:10px 16px;border-radius:12px;border:1px solid rgba(214,173,92,0.3);background:rgba(214,173,92,0.055);color:#f7d98f;font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;">Ready</div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;align-items:center;">
+              <div class="social-pill">
+                <span class="social-icon instagram-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.8" y="3.8" width="16.4" height="16.4" rx="4.6"/><circle cx="12" cy="12" r="3.6"/><circle cx="17.3" cy="6.8" r="1.1" fill="#ffffff" stroke="none"/></svg>
+                </span>
+                @Dwikora63
+              </div>
+              <div class="social-pill">
+                <span class="social-icon linkedin-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.2 8.4a1.6 1.6 0 1 1 0-3.2 1.6 1.6 0 0 1 0 3.2ZM3.8 10.2h2.8v9.1H3.8v-9.1Zm6 0h2.7v1.2h.1c.4-1 1.8-2.1 3.9-2.1 4.1 0 4.9 2.7 4.9 6.2v5.8h-2.8v-5.4c0-1.3 0-3-1.8-3-1.8 0-2.1 1.4-2.1 2.9v5.5h-2.8V10.2Z"/></svg>
+                </span>
+                Indra Gunawan Ardiansyah
+              </div>
+              <div class="social-pill">
+                <span class="social-icon gmail-icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="5.5" width="17.6" height="13" rx="2.2"/><path d="M4.2 7.2 12 12.8l7.8-5.6"/></svg>
+                </span>
+                nigun1998@gmail.com
+              </div>
             </div>
           </div>
         </div>
