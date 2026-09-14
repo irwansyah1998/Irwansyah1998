@@ -1,126 +1,175 @@
-﻿<svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="100%" height="100%" viewBox="0 0 900 420" preserveAspectRatio="xMidYMid meet">
+﻿<svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="100%" height="100%" viewBox="0 0 900 1600" preserveAspectRatio="xMidYMid meet">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#090b12" />
-      <stop offset="35%" stop-color="#131a2a" />
-      <stop offset="100%" stop-color="#070910" />
+      <stop offset="0%" stop-color="#090c12"/>
+      <stop offset="40%" stop-color="#121823"/>
+      <stop offset="100%" stop-color="#171d27"/>
     </linearGradient>
-    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#f6e7b2" />
-      <stop offset="20%" stop-color="#d8b86d" />
-      <stop offset="48%" stop-color="#f5d98d" />
-      <stop offset="100%" stop-color="#b8892e" />
-    </linearGradient>
-    <linearGradient id="panel" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#111827" />
-      <stop offset="100%" stop-color="#0c1017" />
-    </linearGradient>
-    <radialGradient id="glow" cx="30%" cy="15%" r="70%">
-      <stop offset="0%" stop-color="#f6d68f" stop-opacity="0.5" />
-      <stop offset="30%" stop-color="#a47126" stop-opacity="0.18" />
-      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    <radialGradient id="softGlow" cx="50%" cy="18%" r="70%">
+      <stop offset="0%" stop-color="#f7d88b" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#f7d88b" stop-opacity="0"/>
     </radialGradient>
-    <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%">
-      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#000000" flood-opacity="0.65"/>
-    </filter>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fff3d1"/>
+      <stop offset="18%" stop-color="#e5c777"/>
+      <stop offset="48%" stop-color="#f2c963"/>
+      <stop offset="100%" stop-color="#b67d27"/>
+    </linearGradient>
     <style>
-      .luxury-text { font-family: "Segoe UI", Arial, sans-serif; }
-      .small { letter-spacing: 0.18em; text-transform: uppercase; }
-      .led-line {
+      .luxury { font-family: "Segoe UI", Arial, sans-serif; }
+      .mini { letter-spacing: 0.22em; text-transform: uppercase; }
+      .led {
         position: absolute;
-        left: 1.4%;
-        right: 1.4%;
-        height: 2px;
+        left: 9%;
+        right: 9%;
+        height: 2.5px;
         border-radius: 999px;
         background: linear-gradient(90deg,
           transparent 0%,
-          rgba(246, 214, 138, 0.05) 10%,
-          rgba(246, 214, 138, 0.9) 25%,
-          rgba(255, 255, 255, 0.95) 50%,
-          rgba(246, 214, 138, 0.9) 75%,
-          rgba(246, 214, 138, 0.05) 90%,
+          rgba(255,255,255,0.06) 8%,
+          rgba(245,210,122,0.9) 22%,
+          rgba(255,255,255,1) 50%,
+          rgba(245,210,122,0.9) 78%,
+          rgba(255,255,255,0.06) 92%,
           transparent 100%);
         background-size: 220% 100%;
-        animation: ledFlow 4s linear infinite;
-        box-shadow: 0 0 10px rgba(246, 214, 138, 0.9);
+        opacity: 0.9;
+        animation: ledMove 9s ease-in-out infinite;
+        box-shadow: 0 0 10px rgba(245,210,122,0.70), 0 0 18px rgba(245,210,122,0.22);
       }
-      @keyframes ledFlow {
-        0% { background-position: 200% 0; }
-        100% { background-position: -200% 0; }
+      .signal-band {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 150px;
+        background: linear-gradient(90deg,
+          rgba(245,210,122,0) 0%,
+          rgba(245,210,122,0.08) 18%,
+          rgba(255,255,255,0.05) 34%,
+          rgba(245,210,122,0.24) 52%,
+          rgba(255,255,255,0.05) 68%,
+          rgba(245,210,122,0.08) 82%,
+          rgba(245,210,122,0) 100%);
+        background-size: 200% 100%;
+        animation: signalRun 15s ease-in-out infinite;
+        opacity: 0.78;
+      }
+      .orb {
+        position: absolute;
+        border-radius: 50%;
+        pointer-events: none;
+        filter: blur(22px);
+        opacity: 0.65;
+        animation: drift 18s ease-in-out infinite alternate;
+      }
+      @keyframes ledMove {
+        0% { background-position: 220% 0; opacity: 0.3; }
+        20% { opacity: 0.85; }
+        50% { opacity: 0.95; }
+        100% { background-position: -220% 0; opacity: 0.3; }
+      }
+      @keyframes signalRun {
+        0% { background-position: 200% 0; opacity: 0.15; }
+        50% { opacity: 0.72; }
+        100% { background-position: -200% 0; opacity: 0.15; }
+      }
+      @keyframes drift {
+        0% { transform: translate3d(0, 0, 0) scale(1); }
+        100% { transform: translate3d(16px, -22px, 0) scale(1.06); }
+      }
+      @keyframes floatCard {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
       }
       @keyframes glowPulse {
-        0%, 100% { box-shadow: 0 0 10px rgba(246,214,138,0.18), 0 0 18px rgba(246,214,138,0.10); }
-        50% { box-shadow: 0 0 20px rgba(246,214,138,0.38), 0 0 28px rgba(246,214,138,0.18); }
+        0%, 100% { box-shadow: 0 0 12px rgba(245,210,122,0.08), 0 0 18px rgba(245,210,122,0.05); }
+        50% { box-shadow: 0 0 18px rgba(245,210,122,0.15), 0 0 30px rgba(245,210,122,0.10); }
       }
     </style>
   </defs>
 
-  <rect width="900" height="420" fill="url(#bg)"/>
-  <rect width="900" height="420" fill="url(#glow)"/>
+  <rect width="900" height="1600" fill="url(#bg)"/>
+  <rect width="900" height="1600" fill="url(#softGlow)"/>
+  <circle cx="200" cy="150" r="180" fill="#f5d16a" opacity="0.08" class="orb"/>
+  <circle cx="700" cy="1320" r="220" fill="#d8b765" opacity="0.06" class="orb"/>
 
-  <foreignObject x="0" y="0" width="900" height="420">
-    <div xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%;min-height:240px;box-sizing:border-box;position:relative;padding:24px;">
-      <div style="width:100%;height:100%;background:linear-gradient(135deg, rgba(15,17,25,0.95), rgba(8,10,16,0.94));border:1px solid rgba(214,173,92,0.45);border-radius:26px;box-shadow:0 22px 52px rgba(0,0,0,0.62);position:relative;overflow:hidden;animation:glowPulse 3s ease-in-out infinite;">
-        <div class="led-line" style="top:10px;"></div>
-        <div class="led-line" style="bottom:10px; animation-delay:1.3s;"></div>
-        <div style="position:absolute;inset:0;background:linear-gradient(120deg, transparent 0%, rgba(214,173,92,0.08) 40%, transparent 100%);"></div>
+  <foreignObject x="0" y="0" width="900" height="1600">
+    <div xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%;padding:28px;box-sizing:border-box;">
+      <div style="width:100%;height:100%;position:relative;border-radius:46px;border:1px solid rgba(214,173,92,0.30);background:linear-gradient(135deg, rgba(17,20,28,0.97), rgba(11,13,20,0.98));overflow:hidden;animation:glowPulse 5s ease-in-out infinite, floatCard 9s ease-in-out infinite;">
+        <div class="signal-band" style="top:0; opacity:0.8;"></div>
+        <div class="signal-band" style="bottom:0; transform: scaleY(-1); opacity:0.65;"></div>
+        <div class="led" style="top:26px; animation-duration:5.5s;"></div>
+        <div class="led" style="bottom:24px; animation-delay:1.4s; animation-duration:6.4s;"></div>
+        <div style="position:absolute;inset:0;background:linear-gradient(120deg, transparent 0%, rgba(214,173,92,0.05) 42%, transparent 100%);"></div>
 
-        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;padding:26px 28px 0 28px;z-index:1;">
-          <div style="display:flex;align-items:center;gap:18px;min-width:0;flex:1;">
-            <div style="width:86px;height:86px;border-radius:50%;background:linear-gradient(135deg,#f4d68a,#b98b38,#2d1d0c);display:flex;align-items:center;justify-content:center;box-shadow:0 0 24px rgba(214,173,92,0.5);border:2px solid rgba(255,236,176,0.7);flex-shrink:0;">
-              <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:28px;font-weight:700;letter-spacing:2px;color:#20160d;">IGA</div>
+        <div style="position:relative;z-index:1;padding:48px 42px 0 42px;">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:18px;">
+            <div style="display:flex;align-items:center;gap:18px;min-width:0;flex:1;">
+              <div style="width:98px;height:98px;border-radius:28px;border:1px solid rgba(255,229,171,0.72);background:linear-gradient(135deg,#f8e7b7,#d9b76b,#38270d);display:flex;align-items:center;justify-content:center;box-shadow:0 0 22px rgba(214,173,92,0.32);flex-shrink:0;">
+                <div style="font-family:'Segoe UI',Arial,sans-serif;font-size:30px;font-weight:900;letter-spacing:2px;color:#20170b;">IGA</div>
+              </div>
+              <div style="min-width:0;">
+                <div class="luxury mini" style="font-size:11px;color:#d7b972;line-height:1.2;margin-bottom:12px;">Software Engineer</div>
+                <div class="luxury" style="font-size:40px;font-weight:900;line-height:1.02;color:#f5f7fb;letter-spacing:-0.04em;">Indra Gunawan</div>
+                <div class="luxury" style="font-size:40px;font-weight:900;line-height:1.02;color:#f5f7fb;letter-spacing:-0.04em;margin-top:4px;">Ardiansyah</div>
+              </div>
             </div>
-            <div style="min-width:0;">
-              <div class="luxury-text small" style="font-size:11px;color:#c4a86b;letter-spacing:0.22em;margin-bottom:8px;">Software Engineer</div>
-              <div class="luxury-text" style="font-size:34px;font-weight:700;line-height:1.1;color:#f5f7fb;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Indra Gunawan Ardiansyah</div>
-              <div class="luxury-text" style="font-size:14px;color:#d1d7e3;letter-spacing:0.12em;text-transform:uppercase;margin-top:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Full Stack Developer • Laravel Specialist</div>
+
+            <div style="display:flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:999px;border:1px solid rgba(214,173,92,0.32);background:rgba(214,173,92,0.08);color:#f7d98f;font-size:10px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;white-space:nowrap;">
+              Open to work
             </div>
           </div>
 
-          <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;max-width:260px;flex-shrink:0;">
-            <span style="padding:8px 12px;border-radius:999px;border:1px solid rgba(214,173,92,0.38);background:rgba(214,173,92,0.08);color:#f6d98e;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;">PHP</span>
-            <span style="padding:8px 12px;border-radius:999px;border:1px solid rgba(214,173,92,0.38);background:rgba(214,173,92,0.08);color:#f6d98e;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;">Laravel</span>
-            <span style="padding:8px 12px;border-radius:999px;border:1px solid rgba(214,173,92,0.38);background:rgba(214,173,92,0.08);color:#f6d98e;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;">API</span>
-            <span style="padding:8px 12px;border-radius:999px;border:1px solid rgba(214,173,92,0.38);background:rgba(214,173,92,0.08);color:#f6d98e;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;">UI/UX</span>
+          <div class="luxury" style="margin-top:24px;font-size:13px;color:#d7dcea;letter-spacing:0.18em;text-transform:uppercase;">
+            Full Stack Developer • Laravel Specialist
+          </div>
+
+          <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;">
+            <span style="padding:10px 16px;border-radius:999px;border:1px solid rgba(214,173,92,0.28);background:rgba(214,173,92,0.08);color:#f7d98f;font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;">PHP</span>
+            <span style="padding:10px 16px;border-radius:999px;border:1px solid rgba(214,173,92,0.28);background:rgba(214,173,92,0.08);color:#f7d98f;font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;">Laravel</span>
+            <span style="padding:10px 16px;border-radius:999px;border:1px solid rgba(214,173,92,0.28);background:rgba(214,173,92,0.08);color:#f7d98f;font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;">API</span>
+            <span style="padding:10px 16px;border-radius:999px;border:1px solid rgba(214,173,92,0.28);background:rgba(214,173,92,0.08);color:#f7d98f;font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;">System Design</span>
           </div>
         </div>
 
-        <div style="position:relative;display:flex;gap:18px;padding:20px 28px 0 28px;z-index:1;">
-          <div style="flex:1.2;background:rgba(255,255,255,0.02);border:1px solid rgba(214,173,92,0.18);border-radius:18px;padding:18px 18px 14px 18px;min-width:0;">
-            <div class="luxury-text small" style="font-size:11px;color:#c4a86b;letter-spacing:0.22em;margin-bottom:10px;">About Me</div>
-            <p style="margin:0;font-family:'Segoe UI',Arial,sans-serif;font-size:14px;line-height:1.75;color:#e7ebf5;">
-              Indra Gunawan Ardiansyah is a passionate digital developer who enjoys turning ideas into reliable, scalable, and user-friendly systems.
-              With a strong focus on backend architecture, he builds clean code, efficient APIs, and practical solutions that help businesses work smarter.
-              He is especially interested in modern web development, Laravel-based applications, API design, and seamless user experiences.
+        <div style="position:relative;z-index:1;display:grid;grid-template-columns:1.618fr 1fr;gap:18px;padding:32px 42px 0 42px;">
+          <div style="padding:24px 22px;border-radius:24px;border:1px solid rgba(214,173,92,0.15);background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(214,173,92,0.04));">
+            <div class="luxury mini" style="font-size:10px;color:#d7b972;margin-bottom:12px;">Professional Summary</div>
+            <p style="margin:0;font-family:'Segoe UI',Arial,sans-serif;font-size:15px;line-height:1.8;color:#edf1f8;">
+              I build scalable backend systems, secure APIs, and efficient digital experiences for real-world business needs. I enjoy turning complex ideas into reliable products with strong architecture, maintainable code, and a sharp user-focused mindset.
             </p>
           </div>
 
-          <div style="flex:0.9;display:flex;flex-direction:column;gap:12px;min-width:220px;">
-            <div style="background:linear-gradient(135deg, rgba(214,173,92,0.12), rgba(255,255,255,0.02));border:1px solid rgba(214,173,92,0.22);border-radius:16px;padding:14px 16px;">
-              <div class="luxury-text small" style="font-size:10px;color:#d7ba73;letter-spacing:0.2em;">Focus</div>
-              <div style="margin-top:8px;font-size:15px;font-weight:600;color:#f5f7fb;">Backend Architecture</div>
-              <div style="font-size:12px;color:#c9d1e0;margin-top:4px;">Clean logic, secure APIs, scalable systems.</div>
+          <div style="display:flex;flex-direction:column;gap:18px;">
+            <div style="padding:22px 20px;border-radius:22px;border:1px solid rgba(214,173,92,0.17);background:linear-gradient(135deg, rgba(214,173,92,0.08), rgba(255,255,255,0.02));">
+              <div class="luxury mini" style="font-size:9px;color:#d7b972;">Education</div>
+              <div style="margin-top:10px;font-size:15px;font-weight:800;color:#f7f7fb;">D3 Informatics Engineering</div>
+              <div style="margin-top:6px;font-size:13px;color:#d5dbe6;">GPA 3.50</div>
+              <div style="margin-top:2px;font-size:13px;color:#d5dbe6;">Graduated 2020</div>
             </div>
 
-            <div style="background:linear-gradient(135deg, rgba(214,173,92,0.12), rgba(255,255,255,0.02));border:1px solid rgba(214,173,92,0.22);border-radius:16px;padding:14px 16px;">
-              <div class="luxury-text small" style="font-size:10px;color:#d7ba73;letter-spacing:0.2em;">Strength</div>
-              <div style="margin-top:8px;font-size:15px;font-weight:600;color:#f5f7fb;">Problem Solving</div>
-              <div style="font-size:12px;color:#c9d1e0;margin-top:4px;">Turning complexity into simple, elegant solutions.</div>
+            <div style="padding:22px 20px;border-radius:22px;border:1px solid rgba(214,173,92,0.17);background:linear-gradient(135deg, rgba(214,173,92,0.08), rgba(255,255,255,0.02));">
+              <div class="luxury mini" style="font-size:9px;color:#d7b972;">Core Strength</div>
+              <div style="margin-top:10px;font-size:15px;font-weight:800;color:#f7f7fb;">Backend Systems</div>
+              <div style="margin-top:6px;font-size:13px;color:#d5dbe6;">API Architecture</div>
+              <div style="margin-top:2px;font-size:13px;color:#d5dbe6;">Problem Solving</div>
             </div>
           </div>
         </div>
 
-        <div style="position:relative;display:flex;justify-content:space-between;align-items:flex-end;padding:18px 28px 22px 28px;z-index:1;gap:16px;">
-          <div style="display:flex;flex-direction:column;gap:8px;min-width:0;flex:1;">
-            <div class="luxury-text small" style="font-size:10px;color:#d7ba73;letter-spacing:0.22em;">Profile</div>
-            <div style="font-size:12px;color:#dfe6f5;line-height:1.7;max-width:510px;">
-              Inspired by craftsmanship and continuous learning, Indra enjoys building digital products that are not only functional, but also elegant and meaningful.
+        <div style="position:relative;z-index:1;padding:28px 42px 42px 42px;">
+          <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;padding:22px 0 0 0;">
+            <div style="flex:1;min-width:0;">
+              <div class="luxury mini" style="font-size:9px;color:#d7b972;margin-bottom:10px;">Profile</div>
+              <div style="font-size:14px;color:#dfe6f5;line-height:1.85;max-width:560px;">
+                Calm, focused, and always growing, I combine technical discipline with a modern creative mindset to build impactful digital products and meaningful experiences.
+              </div>
             </div>
-          </div>
 
-          <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end;">
-            <div style="padding:9px 14px;border-radius:12px;border:1px solid rgba(214,173,92,0.35);background:rgba(214,173,92,0.08);color:#f7d98f;font-weight:700;font-size:12px;letter-spacing:0.09em;text-transform:uppercase;">Available</div>
-            <div style="padding:9px 14px;border-radius:12px;border:1px solid rgba(214,173,92,0.35);background:rgba(214,173,92,0.08);color:#f7d98f;font-weight:700;font-size:12px;letter-spacing:0.09em;text-transform:uppercase;">Indonesia</div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end;">
+              <div style="padding:10px 16px;border-radius:12px;border:1px solid rgba(214,173,92,0.3);background:rgba(214,173,92,0.055);color:#f7d98f;font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;">Indonesia</div>
+              <div style="padding:10px 16px;border-radius:12px;border:1px solid rgba(214,173,92,0.3);background:rgba(214,173,92,0.055);color:#f7d98f;font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;">Ready</div>
+            </div>
           </div>
         </div>
       </div>
