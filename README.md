@@ -8,6 +8,7 @@ A lightweight portfolio for **Indra Gunawan Ardiansyah**, Full-Stack Developer a
 
 ## Contents
 
+- [About Indra](#about-indra)
 - [Highlights](#highlights)
 - [Technology](#technology)
 - [Project structure](#project-structure)
@@ -18,6 +19,16 @@ A lightweight portfolio for **Indra Gunawan Ardiansyah**, Full-Stack Developer a
 - [Environment variables](#environment-variables)
 - [License](#license)
 - [Author and contact](#author-and-contact)
+
+## About Indra
+
+**Indra Gunawan Ardiansyah** (also known as **irwansyah**) is a Full-Stack Developer and pragmatic software engineer based in Jombang, East Java, Indonesia. His experience spans independent software development, full-stack work at PT Bening Jaya Sentosa, and operational stock and production-data control at PT Aksha Karunia Mill (PT AKM). His current PT AKM role is operational, not an IT engineering position; it provides first-hand context for the real workflows, data-quality challenges, and traceability needs that software is meant to support.
+
+That combination informs how Indra approaches engineering: understand the operational problem first, prioritize correctness and reliability, and choose maintainable, secure, resource-conscious solutions without adding unnecessary complexity.
+
+> “I don't just write code; I build systems for the real world.”
+
+Indra holds a Diploma III (D3) in Informatics Engineering from Universitas Sangga Buana YPKP Bandung, graduating in September 2020 with a GPA of 3.5 / 4.0. His portfolio also reflects his personal perspective: “Between doubt and reason, I choose both.”
 
 ## Highlights
 
