@@ -1,130 +1,159 @@
-# Indra Gunawan Ardiansyah — Portfolio
+<div align="center">
+  <img src="site/assets/social-preview.png" alt="Indra Gunawan Ardiansyah — Full-Stack Developer and Pragmatic Software Engineer" width="100%">
+</div>
 
-A lightweight portfolio for **Indra Gunawan Ardiansyah**, Full-Stack Developer and Pragmatic Software Engineer. The site brings together software development, system architecture, and practical operational experience without overstating project status or professional claims.
+<div align="center">
+  <h1>Indra Gunawan Ardiansyah</h1>
+  <p><strong>Full-Stack Developer · Pragmatic Software Engineer</strong></p>
+  <p>Building digital systems that solve real-world problems.</p>
+  <p>
+    <a href="https://github.com/irwansyah1998">GitHub</a>
+    &nbsp;·&nbsp;
+    <a href="mailto:nigun1998@gmail.com">Email</a>
+    &nbsp;·&nbsp;
+    <a href="#selected-work">Selected work</a>
+    &nbsp;·&nbsp;
+    <a href="#contact">Contact</a>
+  </p>
+</div>
 
-![Portfolio social preview](site/assets/social-preview.png)
+> **Between doubt and reason, I choose both.** I approach engineering with curiosity and healthy skepticism: understand the problem, question unnecessary complexity, and build for how people and systems actually work.
 
-> **Website status:** This repository contains the portfolio source. No live website or deployment has been verified or configured.
+**Based in Jombang, East Java, Indonesia** · **GitHub:** [@irwansyah1998](https://github.com/irwansyah1998)
 
-## Contents
+> **Portfolio availability:** This repository contains the portfolio source, including the interactive website in [`site/`](site/). No public deployment or live website URL has been verified.
 
-- [About Indra](#about-indra)
-- [Highlights](#highlights)
-- [Technology](#technology)
-- [Project structure](#project-structure)
-- [Run locally](#run-locally)
-- [Validate](#validate)
-- [Production and deployment](#production-and-deployment)
-- [Performance, accessibility, and security](#performance-accessibility-and-security)
-- [Environment variables](#environment-variables)
-- [License](#license)
-- [Author and contact](#author-and-contact)
+## Profile
 
-## About Indra
+I’m **Indra Gunawan Ardiansyah**, a full-stack developer interested in the systems behind useful software—from interfaces and APIs to data integrity, architecture, and the operations a system must support.
 
-**Indra Gunawan Ardiansyah** (also known as **irwansyah**) is a Full-Stack Developer and pragmatic software engineer based in Jombang, East Java, Indonesia. His experience spans independent software development, full-stack work at PT Bening Jaya Sentosa, and operational stock and production-data control at PT Aksha Karunia Mill (PT AKM). His current PT AKM role is operational, not an IT engineering position; it provides first-hand context for the real workflows, data-quality challenges, and traceability needs that software is meant to support.
+My experience brings together independent software development, a full-stack developer role at PT Bening Jaya Sentosa, and hands-on stock control and production-data reporting at PT Aksha Karunia Mill (PT AKM). Working with production records gives me practical insight into the gap between physical workflows and digital information: manual-entry risks, inconsistent records, reconciliation, traceability, and the limits of spreadsheet-based reporting.
 
-That combination informs how Indra approaches engineering: understand the operational problem first, prioritize correctness and reliability, and choose maintainable, secure, resource-conscious solutions without adding unnecessary complexity.
+My current PT AKM position is **operational stock and data control, not an IT engineering role**. I value that distinction: the operational experience informs how I think about software, but it is not presented as a completed software system.
 
-> “I don't just write code; I build systems for the real world.”
+> **“I don't just write code; I build systems for the real world.”**
 
-Indra holds a Diploma III (D3) in Informatics Engineering from Universitas Sangga Buana YPKP Bandung, graduating in September 2020 with a GPA of 3.5 / 4.0. His portfolio also reflects his personal perspective: “Between doubt and reason, I choose both.”
+## Engineering approach
 
-## Highlights
+| Principle | How it shapes my work |
+|---|---|
+| **Start with the work** | Understand users, operational workflows, data, and constraints before choosing a solution. |
+| **Correctness first** | Treat reliable behavior, validation, and data integrity as core product requirements. |
+| **Use proportionate architecture** | Prefer clear, maintainable systems; avoid dependencies and abstractions without a practical purpose. |
+| **Design with security in mind** | Consider access, trust boundaries, and operational risk early in the design. |
+| **Respect resources** | Account for performance, maintainability, and the cost of operating software. |
 
-- Responsive single-page portfolio with sections for experience, skills, projects, architecture, engineering philosophy, education, and contact.
-- Dark and light themes with a saved preference when browser storage is available.
-- Keyboard-friendly mobile navigation and project-status filters.
-- Clearly separated public source repositories, operational experience, and unverified or future concepts.
-- No framework, external font, runtime API, tracking, fake contact form, or third-party JavaScript dependency.
-- Search metadata, Open Graph information, a custom social-preview graphic, and an SVG favicon.
+## Experience
 
-## Technology
+### Stock Control & Operational Data Control · PT Aksha Karunia Mill
+**December 2024 — Present**
 
-- Semantic HTML
-- CSS with custom properties and responsive layouts
-- Vanilla JavaScript for theme, mobile navigation, project filters, active-section indication, and back-to-top control
-- Python 3 standard library for the optional local preview and repository validation script
+Record and monitor peeled wood materials, materials awaiting rotary processing, and production input/output across eight rotary machines. Responsibilities include shift-based reporting, grades and volumes, spreadsheet workflows, stock control, and production-data reconciliation. This role provides practical domain context for data quality and traceability.
 
-There is no package manager, package manifest, compilation step, or build dependency.
+### Full-Stack Developer · PT Bening Jaya Sentosa
+**2023 — 2024**
 
-## Project structure
+Worked on full-stack application features, frontend/backend integration, database-related development, troubleshooting, and maintenance for practical business-oriented applications.
 
-```text
-.
-├── site/
-│   ├── assets/
-│   │   ├── favicon.svg
-│   │   └── social-preview.svg
-│   ├── index.html
-│   ├── script.js
-│   └── styles.css
-├── docs/
-│   ├── ARCHITECTURE.md
-│   └── REPOSITORY-AUDIT.md
-├── scripts/
-│   └── validate_site.py
-├── CHANGELOG.md
-├── Documentation.md
-└── README.md
-```
+### IT Freelancer · Intelligence of Technology Development
+**2019 — Present**
 
-Existing profile assets at the repository root are retained and are not required to run the site.
+Independent software development spanning web and full-stack applications, architecture and implementation, database integration, technical troubleshooting, and maintenance.
 
-## Run locally
+## Technical toolkit
 
-Install no packages. From the repository root, start Python's built-in static server:
+Technologies and engineering areas represented in my portfolio. Listing a tool does not imply a proficiency score or a specific number of years using it.
+
+| Area | Technologies and concepts |
+|---|---|
+| **Frontend** | HTML5, CSS3, JavaScript, Vue.js 3, Vite, Axios, Tailwind CSS |
+| **Backend & APIs** | PHP, Laravel 10/11, CodeIgniter 3, REST APIs, Laravel Sanctum, OpenAPI |
+| **Data** | MySQL, SQLite, PostgreSQL, relational design, normalization, SQL optimization |
+| **Infrastructure** | Linux, Apache, Nginx, networking fundamentals, server administration |
+| **Mobile exploration** | Flutter, Dart, Android, iOS |
+| **Architecture & practice** | MVC, API contracts, role-based access, data integrity, security by design, performance and maintainability |
+
+## Selected work
+
+Projects are labeled by what can be verified. A public source repository is not a claim that a project is currently deployed; ideas and operational workflows are not described as finished software.
+
+### Public source
+
+| Project | Focus | Status |
+|---|---|---|
+| [Garment company data management](https://github.com/irwansyah1998/TugasAkhir) | CodeIgniter/PHP web application for organizing business data and supporting operational workflows. | Public source verified; deployment not verified. |
+| [SiMadik · Education management](https://github.com/irwansyah1998/SiMadik) | CodeIgniter 3 school-management application; repository documentation describes attendance and administrative workflows. | Public source verified. The repository has a custom restrictive license; review its terms before use. |
+
+### Operational case study
+
+**Production data & stock control · PT Aksha Karunia Mill**
+
+A real operational workflow covering shift reports, stock movement, and production records across eight rotary machines. This is maintained through operational records and spreadsheet reporting—not a completed software product. Possible software improvements such as validated inputs, audit trails, and centralized reporting remain proposals, not implemented features.
+
+### Concepts and research
+
+The following are **concepts, research, or projects whose implementation status is unverified**; they are not presented as completed products:
+
+- **Indra Metered Connection** — Android network activity and connection-quality concept.
+- **Peer-to-peer chat** — Flutter communication concept exploring peer identity and connectivity constraints.
+- **Android memory inspector** — diagnostic-learning concept for applications I own or control, within Android sandbox boundaries.
+- **Floating auto-tap** — user-directed Android accessibility concept, subject to platform permissions and restrictions.
+- **IRW OS · Server core** — future exploration of modular Linux server management.
+- **SEANKING content production** — AI-assisted content workflow research with human review.
+- **Multi-language architecture** — research into language/runtime boundaries and system trade-offs.
+- **CIF file compression** — future format research; the intended format and specification remain undefined.
+
+## Architecture perspective
+
+My portfolio documents two different reference patterns—not claims about currently deployed systems:
+
+1. **Vue 3 + Laravel REST API:** a Vue single-page application communicates through Axios with a Laravel API; Sanctum protects routes, application services handle business logic, and OpenAPI/L5 Swagger describes the API.
+2. **CodeIgniter 3 + MySQL:** a server-rendered MVC application keeps routing, session-based authentication, role checks, application logic, and persistence within one application boundary.
+
+The right choice depends on the requirements: separating the interface and API can support independent development, while a monolith can keep a defined workflow simpler to operate. Both require deliberate attention to data integrity, access boundaries, and maintainability.
+
+## Education
+
+**Diploma III (D3), Informatics Engineering**
+
+Universitas Sangga Buana YPKP Bandung · Graduated September 2020 · GPA **3.5 / 4.0**
+
+## Contact
+
+For professional inquiries, collaboration, or a conversation about practical software systems:
+
+- **Email:** [nigun1998@gmail.com](mailto:nigun1998@gmail.com)
+- **GitHub:** [github.com/irwansyah1998](https://github.com/irwansyah1998)
+- **Location:** Jombang, East Java, Indonesia
+
+## Explore this repository
+
+The interactive, responsive portfolio website is implemented with semantic HTML, CSS, and vanilla JavaScript; it has no package manager or external runtime dependencies.
+
+- [Open the portfolio source](site/index.html)
+- [Read the architecture notes](docs/ARCHITECTURE.md)
+- [Read the repository audit](docs/REPOSITORY-AUDIT.md)
+- [Read the development documentation](Documentation.md)
+- [View the changelog](CHANGELOG.md)
+
+To preview the site locally, run from the repository root:
 
 ```powershell
-python --version
 python -m http.server 4173 --directory site
 ```
 
-Open `http://localhost:4173` in a browser. Stop the server with `Ctrl+C`.
-
-Alternatively, open `site/index.html` directly; a local server is closer to the eventual hosted environment.
-
-## Validate
-
-Run the dependency-free structural and local-link checks:
+Then open `http://localhost:4173`. To run the dependency-free structural checks:
 
 ```powershell
 python scripts/validate_site.py
 ```
 
-The script validates local asset paths, in-page anchors, external-link protections, required sections and metadata, theme/filter hooks, and project-card counts. It does not replace browser, assistive-technology, or performance testing.
+There is no compilation/build step. GitHub Pages is not configured, and no deployment has been performed.
 
-## Production and deployment
+<details>
+  <summary>Repository, accessibility, and license notes</summary>
 
-There is no generated build output: `site/` is the production-ready static source. The build step is therefore **none**. For a static host, publish the contents of `site/` as the document root.
-
-GitHub Pages is **not configured or enabled**. The project has no deployment workflow and no verified production URL or canonical domain. To use GitHub Pages, first choose the desired URL and publishing strategy; then explicitly configure a workflow that uploads `site/` as its Pages artifact (or use a supported branch directory containing the site files). Check the generated URL and metadata before sharing it. Do not treat a repository path or the Open Graph image's raw-source URL as a live website.
-
-No deployment has been performed.
-
-## Performance, accessibility, and security
-
-- The page ships without third-party scripts, runtime requests, downloaded fonts, or framework dependencies.
-- System font stacks and CSS/SVG illustrations avoid external asset requests.
-- Responsive layout, visible keyboard focus, a skip link, semantic landmarks, reduced-motion support, and keyboard-operable controls are included.
-- Theme preference is stored locally only; if storage is unavailable, the theme still works for the current page view.
-- External repository/profile links use `rel="noopener noreferrer"` with new browsing contexts.
-- No credentials, API secrets, contact-form data, or analytics are used.
-- Lighthouse/Core Web Vitals have not been measured in a browser for this change; no scores or production performance claims are made.
-
-See [the repository audit](docs/REPOSITORY-AUDIT.md) and [technical documentation](Documentation.md) for scope and known limitations.
-
-## Environment variables
-
-None. The website is static and contains no server-side configuration.
-
-## License
-
-No repository-wide license file is present. Do not assume that the site, existing assets, or linked project repositories are licensed for unrestricted reuse. In particular, the SiMadik repository has its own custom restrictive license; see its [source repository](https://github.com/irwansyah1998/SiMadik) for current terms.
-
-## Author and contact
-
-**Indra Gunawan Ardiansyah**\
-[GitHub: irwansyah1998](https://github.com/irwansyah1998) · [Email: nigun1998@gmail.com](mailto:nigun1998@gmail.com)
-
-Projects referenced in this portfolio: [TugasAkhir](https://github.com/irwansyah1998/TugasAkhir) and [SiMadik](https://github.com/irwansyah1998/SiMadik). Source availability does not imply a deployed demo.
+- The site includes responsive layouts, visible keyboard focus, semantic landmarks, reduced-motion support, and keyboard-operable controls. Formal screen-reader and Lighthouse/Core Web Vitals results have not been measured.
+- No repository-wide license file is present. Do not assume the website, assets, or linked project repositories are licensed for unrestricted reuse. SiMadik has its own custom restrictive license.
+- Existing profile assets at the repository root are retained; they are not required to run the portfolio website.
+</details>
